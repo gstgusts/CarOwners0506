@@ -5,6 +5,22 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   Number of owners is @Model.Owners.ToArray().Length
+
+    @foreach(var owner in Model.Owners)
+    {
+        <div>
+            <span>@owner.Name</span>
+            <span>@owner.Surname</span>
+        </div>
+    }
+
+    @foreach (var owner in Model.NumberOfCars)
+    {
+        <div>
+            <span>@owner.Name</span>
+            <span>@owner.Surname</span>
+            <span><strong>@owner.NumberOfCars</strong></span>
+        </div>
+    }
 </div>

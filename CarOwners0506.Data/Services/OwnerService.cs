@@ -23,5 +23,6 @@ namespace CarOwners0506.Data.Services
         {
             return _dataAccessService.GetItems<CarsPerOwnerDto>("select * from [dbo].[vCarsPerOwner]");
         }
+
     }
 }
